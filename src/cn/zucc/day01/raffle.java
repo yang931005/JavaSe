@@ -21,6 +21,7 @@ public class raffle {
 		System.out.println("你的学号各位上数字之和是:"+e);
 		boolean x = e==20;
 		System.out.println("你是幸运学生:"+x);
+		
 	}
 
 }
