@@ -3,8 +3,9 @@ package cn.zucc.day04;
 
 
 public interface UserDao {
-	public User findUser(String uName);
-	public int addUser(User user);
-	public int updateUser(User user);
+	public boolean findUser(String uName);
+	public void addUser(User user);
+	public void updateUser();
+
 	
 }

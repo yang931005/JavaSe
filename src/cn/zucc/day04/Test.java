@@ -9,8 +9,10 @@ public class Test {
 	/**
 	 * @param args
 	 */
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
+		Scanner sc = new Scanner(System.in);
 	/*	Dog dog = new Dog("1",2,3,"4");
 		System.out.println(dog.getHealth());
 		
@@ -145,21 +147,33 @@ public class Test {
 		
 		Topic tp1 = new Topic("22","22","22",22);
 		tp1.getinfo();
+	
 		*/
 		
-		UserDao userDao = new UserDaoImpl();
+		
+		UserDaoImpl udi = new UserDaoImpl();
+		String flag;
+		do{
 		User user = new User();
-		String name= "tom";
-		if (userDao.findUser(name)!=null) {
-			System.out.println(userDao.findUser(name));
-		}else {
-			System.out.println("没找到");
-		}
+		System.out.println("请输入用户名");
+		user.uName = sc.next();
+		System.out.println("请输入密码");
+		user.psw = sc.next();
+		udi.addUser(user);
+		System.out.println("是否继续输入(y/n)");
+		flag = sc.next();
+		}while(flag.equals("y"));
 		
 		
+		System.out.println("请输入查找的用户名");
+		String uName=sc.next();
 		
+		if(udi.findUser(uName)){
+			System.out.println("找到");
+			udi.updateUser();
+		}else{System.out.println("没找到");}
 		
-		
+	 	
 		
 		
 		
