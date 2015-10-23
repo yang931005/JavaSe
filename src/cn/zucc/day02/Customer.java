@@ -23,10 +23,13 @@ public class Customer {
 		System.out.println(" «∑ÒºÃ–¯ ‰»Î£ø£®y/n£©");
 		flag = sc.next();
 		}while(flag.equals("y"));
-		*/
+		
 		
 		MyShopping ms = new MyShopping();
 		ms.maininterf();
+		*/
+		
+		
 		
 	}
 
